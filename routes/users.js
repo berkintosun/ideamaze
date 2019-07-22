@@ -9,7 +9,7 @@ router.get('/login',(req,res) => {
 
 // Register
 router.get('/register',(req,res) => {
-    res.render('register');
+    res.render('users/register');
 })
 
 module.exports = router;

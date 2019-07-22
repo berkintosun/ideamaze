@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const exphbs = require('express-handlebars');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -52,6 +53,9 @@ app.engine('handlebars',exphbs({
     defaultLayout:'main'
 }));
 app.set('view engine','handlebars');
+
+// Static files (Public folder)
+app.use(express.static(path.join(__dirname,'public')));
 
 //Routes
 // Load routes
