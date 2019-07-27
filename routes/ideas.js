@@ -83,7 +83,7 @@ router.put('/:id',(req,res) => {
 
 // Delete Idea
 router.delete('/:id',(req,res) => {
-    Idea.remove({_id:req.params.id})
+    Idea.deleteOne({_id:req.params.id})
     .then(() => {
         req.flash('success_msg','Idea deleted succesfully!');
         res.redirect('/ideas');
