@@ -69,6 +69,10 @@ app.use(express.static(path.join(__dirname,'public')));
 const ideas = require('./routes/ideas'); // ideas or ideas.js its same
 const users = require('./routes/users');
 
+// Using loaded routes
+app.use('/ideas',ideas);
+app.use('/users',users);
+
 // Index
 app.get('/', (req,res) => {
     const Param = "Index"
@@ -82,9 +86,7 @@ app.get('/about',(req,res) => {
     res.render("about");
 })
 
-// Using loaded routes
-app.use('/ideas',ideas);
-app.use('/users',users);
+
 
 const port = 5000;
 
