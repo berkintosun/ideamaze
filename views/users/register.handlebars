@@ -3,14 +3,14 @@
         <div class="card card-body">
             <img src="/img/logo.png" alt="" class="logo">
             <h3 class="text-center">Register</h3>
-            <form action="POST">
+            <form action="/users/register" method="POST">
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" class="form-control" name="name" required>
+                    <input type="text" class="form-control" name="name" value="{{name}}" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" name="email" required>
+                    <input type="email" class="form-control" name="email" value="{{email}}" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
